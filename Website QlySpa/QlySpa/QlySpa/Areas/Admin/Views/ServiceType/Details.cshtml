@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model QlySpa.Models.EF.LoaiDichVu
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 col-right">
+            <!---->
+            <div class="box-category">
+                <div class="ct-detail-pr">
+                    <div class="row ct-detail-top">
+                        <div class="product__view__image col-md-6 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-9 col-xs-12">
+                                    <div class="product__view__image--list">
+                                        <a href="#" data-fancybox="gallery" class="fancybox">
+                                            <img src="/Areas/Admin/Content/images/@Model.Anh" style="width: 410px; height: 410px;" alt="name your product" />
+                                            @*class="elevate__zoom" data-zoom-image="uploads/pr-large2.jpg" id="elevate__zoom" title="product-2">*@
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__view__image col-md-6 col-sm-6 col-xs-12">
+
+                            <div class="name" style="font-size:35px">@Html.DisplayFor(model => model.tenLoaiDV)</div>
+                            <div class="product__view__des" style="font-size:20px;color:black">
+                                <label>tên loại dịch vụ:</label>
+                                <span class="name">
+                                    @Html.DisplayFor(model => model.tenLoaiDV)
+                                </span>
+                            </div>
+                            <div class="product__view__des" style="        font-size: 20px;
+        color: black
+">
+                                <label>Số lượng Ngày thực hiện</label>
+                                <span class="name">
+                                    @Html.DisplayFor(model => model.NgayTH)
+                                </span>
+                            </div>
+
+                            <div class="product__view__des" style="        font-size: 20px;
+        color: black
+">
+                                <label>
+                                    Giá:
+                                </label>
+
+                                <span class="name">
+                                    @Html.DisplayFor(model => model.Gia)
+                                </span>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            @*<div class="form-control" style="width:60px; height:35px; background-color:blue">
+                                                <span class="name">
+                                                    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP })
+                                                </span>*@
+                                            <a href="@Url.Action("Edit", "ServiceType", new { id = Model.idLoaiDV })" class="btn btn-primary">Edit</a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" onclick="XoaDichVu('@Model.idLoaiDV')" class="btn btn-primary">Delete</a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="@Url.Action("Index", "ServiceType") " class="btn btn-primary">Back</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        function XoaDichVu(id) {
+            if (confirm("Bạn muốn xóa dịch vụ này?") == true) {
+                $.post("/Areas/Admin/Service/Delete", { "id": id }, function (data) {
+                    location.href = "/Service";
+                })
+            } else {
+
+            }
+        }
+</script>
+
+
+
