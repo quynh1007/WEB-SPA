@@ -146,14 +146,17 @@
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\serviceViewController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DAO\LoginDAO.cs" />
     <Compile Include="Models\DAO\SanPhamDAO.cs" />
     <Compile Include="Models\DAO\ServiceDAO.cs" />
     <Compile Include="Models\DAO\ServiceTypeDAO.cs" />
+    <Compile Include="Models\DTO\ACCOUNT_DTO.cs" />
     <Compile Include="Models\DTO\Service.cs" />
     <Compile Include="Models\EF\ACCOUNT.cs" />
     <Compile Include="Models\EF\ACCOUNT_ROLE.cs" />
@@ -2283,6 +2286,8 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\serviceView\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
