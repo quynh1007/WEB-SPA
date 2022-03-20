@@ -138,18 +138,18 @@ namespace QlySpa.Areas.Admin.Controllers
             DichVu sp = dao.FindDVByID(id);
             return View(sp);
         }
-        //public ActionResult cnk(int id)
-        //{
-        //    CNKDAO dao = new CNKDAO();
-        //    CNKDTO cn = dao.Congnhankhoan(id);
-        //    return View(cn);
-        //}
-        //public ActionResult daumuc(int id)
-        //{
-        //    DauMucDAO dao = new DauMucDAO();
-        //    DauMucDTO dm = dao.daumuc(id);
-        //    return View(dm);
-        //}
+        public ActionResult LoaiDV(int id)
+        {
+            ServiceTypeDAO dao = new ServiceTypeDAO();
+            LoaiDichVu dv = dao.FindProductByID(id);
+            return View(dv);
+        }
+        public ActionResult CTSP(int id)
+        {
+            SanPhamDAO dao = new SanPhamDAO();
+            SanPham dm = dao.FindProductByID(id);
+            return View(dm);
+        }
         // delete
 
         [AcceptVerbs(HttpVerbs.Post | HttpVerbs.Get)]

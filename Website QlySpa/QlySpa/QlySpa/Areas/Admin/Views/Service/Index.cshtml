@@ -101,17 +101,21 @@
 
                     <img src="~/Areas/Admin/Content/images/edit.png" />
                 </a>
+                <a href="@Url.Action("Details", "Service", new { id = item.MaDV })" class="filter__page-btn  " style="text-decoration:none">
+
+                    <img src="~/Areas/Admin/Content/images/detail.png" />
+                </a>
                 @*<a href="@Url.Action("Details", "Service", new { id = item.MaDV })">
 
-                <i title="Chi tiết" style="color: #4D4D4D;" fill="currentColor" class="fa fa-info-circle"></i>
+        <i title="Chi tiết" style="color: #4D4D4D;" fill="currentColor" class="fa fa-info-circle"></i>
 
-                </a>*@
+        </a>*@
                 <a class="btn-delete" href="@Url.Action("Delete", "Service", new { id = item.MaDV })">
                     <img src="~/Areas/Admin/Content/images/delete.png" />
                 </a>
-                    @*<a href="#" onclick="XoaNK('@item.MaDV')">
-                        <i title="Xóa" style="color:#F08080; " class="fa fa-trash fa-x"></i>
-                    </a>*@
+                @*<a href="#" onclick="XoaNK('@item.MaDV')">
+            <i title="Xóa" style="color:#F08080; " class="fa fa-trash fa-x"></i>
+        </a>*@
             </td>
         </tr>
     }

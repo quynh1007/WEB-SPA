@@ -4,5 +4,55 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
+
+
+@model QlySpa.Models.EF.DichVu
+
+
+
 <h2>Details</h2>
 
+<div>
+    <h4>Thông tin chi tiết dịch vụ</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="row">
+        <dt>
+            Mã dịch vụ: &nbsp;
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDV)
+        </dd>
+</div>
+<div class="row">
+    <dt>
+        giá: &nbsp;
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Gia)
+    </dd>
+</div>
+<div class="row">
+    <dt>
+        Mô tả: &nbsp;
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Remark)
+    </dd>
+</div>
+</dl>
+<div>
+    @{Html.RenderAction("LoaiDV", "NKSLK", new { id = @ViewBag.id });}
+</div>
+<div>
+    @{Html.RenderAction("LoaiSP", "CTSP", new { id = @ViewBag.id });}
+</div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -24,6 +24,9 @@ namespace QlySpa.Models.EF
         [Column(TypeName = "date")]
         public DateTime? ThanhTien { get; set; }
 
+        [StringLength(255)]
+        public string Remark { get; set; }
+
         public virtual HoaDon HoaDon { get; set; }
 
         public virtual DichVu DichVu { get; set; }

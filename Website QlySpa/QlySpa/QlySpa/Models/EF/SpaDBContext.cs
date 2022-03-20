@@ -22,7 +22,7 @@ namespace QlySpa.Models.EF
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<ROLE> ROLEs { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<VouCher> VouChers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -40,10 +40,22 @@ namespace QlySpa.Models.EF
                 .WithOptional(e => e.ACCOUNT)
                 .HasForeignKey(e => e.ID_ACCOUNT);
 
+            modelBuilder.Entity<CTHD>()
+                .Property(e => e.Remark)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DichVu>()
+                .Property(e => e.Remark)
+                .IsUnicode(false);
+
             modelBuilder.Entity<DichVu>()
                 .HasMany(e => e.CTHDs)
                 .WithRequired(e => e.DichVu)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<HoaDon>()
+                .Property(e => e.Remark)
+                .IsUnicode(false);
 
             modelBuilder.Entity<HoaDon>()
                 .HasMany(e => e.CTHDs)

@@ -32,6 +32,9 @@ namespace QlySpa.Models.EF
 
         public DateTime? NgayKT { get; set; }
 
+        [StringLength(255)]
+        public string Remark { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHD> CTHDs { get; set; }
 
