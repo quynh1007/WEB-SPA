@@ -169,7 +169,6 @@
     <Compile Include="Models\EF\ROLE.cs" />
     <Compile Include="Models\EF\SanPham.cs" />
     <Compile Include="Models\EF\SpaDBContext.cs" />
-    <Compile Include="Models\EF\User.cs" />
     <Compile Include="Models\EF\VouCher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2265,6 +2264,8 @@
     <Content Include="Content\fonts\FontAwesome.otf" />
     <Content Include="Content\js\fancybox\Descr.WD3" />
     <Content Include="Areas\Admin\Views\SanPham\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\LoaiDV.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\CTSP.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

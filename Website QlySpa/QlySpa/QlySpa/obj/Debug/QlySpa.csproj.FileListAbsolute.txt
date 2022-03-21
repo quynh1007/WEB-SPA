@@ -179,8 +179,8 @@ C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\bin\System.Web.WebPa
 C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\bin\System.Web.WebPages.Razor.xml
 C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\bin\Antlr3.Runtime.pdb
 C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\obj\Debug\QlySpa.csproj.AssemblyReference.cache
 C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\obj\Debug\QlySpa.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\obj\Debug\QlySpa.csproj.CopyComplete
 C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\obj\Debug\QlySpa.dll
 C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\obj\Debug\QlySpa.pdb
+C:\Users\Admin\Desktop\WEB-SPA\Website QlySpa\QlySpa\QlySpa\obj\Debug\QlySpa.csproj.AssemblyReference.cache

@@ -2,6 +2,9 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity.Spatial;
 
 namespace QlySpa.Models.EF
 {
@@ -22,7 +25,7 @@ namespace QlySpa.Models.EF
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<ROLE> ROLEs { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+       // public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<VouCher> VouChers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

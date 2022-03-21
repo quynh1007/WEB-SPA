@@ -1,0 +1,38 @@
+﻿@model QlySpa.Models.EF.LoaiDichVu
+@{ Layout = null;}
+
+<div>
+    <h4>Loại dịch vụ của gói</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="row">
+        <dt>
+            Loại dịch vụ: &nbsp;
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenLoaiDV)
+        </dd>
+</div>
+<div class="row">
+    <dt>
+        Giá: &nbsp;
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Gia)
+    </dd>
+</div>
+<div class="row">
+    <dt>
+        Số ngày thực hiện: &nbsp;
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.NgayTH)
+    </dd>
+</div>
+
+    </dl>
+</div>
+

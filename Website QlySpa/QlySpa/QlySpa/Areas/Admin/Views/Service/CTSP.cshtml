@@ -1,0 +1,48 @@
+﻿@model QlySpa.Models.EF.SanPham
+@{ Layout = null;}
+
+<div>
+    <h4>Loại sản phẩm của gói</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="row">
+        <dt>
+            Loại sản phẩm: &nbsp;
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+</div>
+<div class="row">
+    <dt>
+        giá: &nbsp;
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Gia)
+    </dd>
+</div>
+<div class="row">
+    <dt>
+        Ngày sản xuất: &nbsp;
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.NSX)
+    </dd>
+</div>
+<div class="row">
+    <dt>
+        Hạn sử dụng: &nbsp;
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.HSD)
+    </dd>
+</div>
+
+    </dl>
+</div>
+
+
