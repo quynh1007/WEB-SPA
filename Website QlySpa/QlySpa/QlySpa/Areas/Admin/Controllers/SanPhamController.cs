@@ -80,23 +80,25 @@ namespace QlySpa.Areas.Admin.Controllers
             //ViewBag.cat = d.ListQC();
             SanPham sp = dao.FindProductByID(id);
             ViewBag.id = id;
-            //ViewBag.NgayTH = "";
-            //if (sp.NgayTH != null)
-            //{
-            //    var lstDate = sp.NgayTH.ToString().Split(' ');
-            //    var strDate = lstDate[0];
-            //    //String dt = DateTime.ParseExact(strDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture); ;
-            //    //ViewBag.NgayDangKy = dt;
-            //}
+            ViewBag.gia = sp.Gia;
+            ViewBag.Anh = sp.Anh;
+            ViewBag.NSX = "";
+            if (sp.NSX != null)
+            {
+                var lstDate = sp.NSX.ToString().Split(' ');
+                var strDate = lstDate[0];
+                String dt = DateTime.ParseExact(strDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture); 
+                ViewBag.NSX = dt;
+            }
 
-            //ViewBag.HanSuDung = "";
-            //if (sp.HanSuDung != null)
-            //{
-            //    var lstDate = sp.HanSuDung.ToString().Split(' ');
-            //    var strDate = lstDate[0];
-            //    String dt = DateTime.ParseExact(strDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture); ;
-            //    ViewBag.HanSuDung = dt;
-            //}
+            ViewBag.HSD = "";
+            if (sp.HSD != null)
+            {
+                var lstDate = sp.HSD.ToString().Split(' ');
+                var strDate = lstDate[0];
+                String dt = DateTime.ParseExact(strDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture); 
+                ViewBag.HSD = dt;
+            }
 
             return View(sp);
         }
